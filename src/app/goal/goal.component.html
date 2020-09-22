@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Goals</title>
+</head>
+
+<body>
+    <div class="container">
+        <p class="p-3">Hey Hey Checkout my Goals. Well, i can either add a new goal any time</p>
+        <app-create-goal></app-create-goal>
+        <div class=" goals" *ngFor="let goal of goals">
+            <div class="card card-cascade wider reverse mt-3">
+                <div class="card-body card-body-cascade text-center"><span id="goalName">
+                        {{goal.name|uppercase}}</span>
+                    <hr>
+                    <div class="row">
+                        <div class="col-8">
+                            {{goal.description}}
+                        </div>
+                        <div class="col-4">
+                            {{goal.completeDate|date}}
+                            <span class="iEdit"><i class="fa fa-trash"></i></span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
